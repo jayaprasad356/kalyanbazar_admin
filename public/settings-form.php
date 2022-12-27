@@ -8,14 +8,10 @@ $fn = new custom_functions;
 <?php
 if (isset($_POST['btnUpdate'])) {
 
-    $whatsapp = $db->escapeString(($_POST['whatsapp']));
     $app = $db->escapeString(($_POST['app']));
     
     $error = array();
     
-    if (empty($whatsapp)) {
-        $error['whatsapp'] = " <span class='label label-danger'>Required!</span>";
-    }
    
     if (empty($app)) {
         $error['app'] = " <span class='label label-danger'>Required!</span>";
@@ -23,9 +19,9 @@ if (isset($_POST['btnUpdate'])) {
    
        
     
-    if (!empty($app) && !empty($whatsapp) ) {
+    if (!empty($app) ) {
            
-            $sql_query = "UPDATE settings SET app='$app',whatsapp='$whatsapp' WHERE id=1";
+            $sql_query = "UPDATE settings SET app='$app' WHERE id=1";
             $db->sql($sql_query);
             $result = $db->getResult();
             if (!empty($result)) {
@@ -72,13 +68,7 @@ $res = $db->getResult();
                 <!-- form start -->
                 <form name="delivery_charge" method="post" enctype="multipart/form-data">
                     <div class="box-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Whatsapp</label> <i class="text-danger asterik">*</i><?php echo isset($error['whatsapp']) ? $error['whatsapp'] : ''; ?>
-                                <input type="text" class="form-control" name="whatsapp" value="<?= $res[0]['whatsapp']; ?>" required>
-                            </div>
-                        
-                          
-                        
+                
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Mobile Application (APK)</label> <i class="text-danger asterik">*</i><?php echo isset($error['app']) ? $error['app'] : ''; ?>
                                 <input type="text" class="form-control" name="app" value="<?= $res[0]['app']; ?>" required>

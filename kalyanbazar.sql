@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2022 at 08:15 AM
+-- Generation Time: Dec 27, 2022 at 07:43 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `kb_sattamatka`
+-- Database: `kalyanbazar`
 --
 
 -- --------------------------------------------------------
@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `settings` (
   `id` int(11) NOT NULL,
-  `whatsapp` varchar(400) DEFAULT NULL,
   `app` varchar(400) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -37,8 +36,8 @@ CREATE TABLE `settings` (
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `whatsapp`, `app`) VALUES
-(1, 'http:///gdse34.whatsapp.com', 'http://sattamatka.apk');
+INSERT INTO `settings` (`id`, `app`) VALUES
+(1, 'http://kalyanbazar_admin.apk');
 
 --
 -- Indexes for dumped tables

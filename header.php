@@ -110,11 +110,11 @@ $fn = new custom_functions;
             <a href="home.php" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini">
-                  
+                   <img src="dist/img/logo.png" height="27px" width="27px" style="border-radius:15px;" alt="">
                 </span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg">
-                    <h3>Kb SattaMatka</h3>
+                    <h3>Kalyanbazar</h3>
                 </span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
