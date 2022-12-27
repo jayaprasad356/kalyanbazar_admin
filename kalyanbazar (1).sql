@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2022 at 07:43 AM
+-- Generation Time: Dec 27, 2022 at 12:26 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -29,15 +29,23 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `settings` (
   `id` int(11) NOT NULL,
-  `app` varchar(400) DEFAULT NULL
+  `app` varchar(400) DEFAULT NULL,
+  `app_name` text DEFAULT NULL,
+  `developer_name` text DEFAULT NULL,
+  `ratings` text DEFAULT NULL,
+  `downloads_count` text DEFAULT NULL,
+  `image` text DEFAULT NULL,
+  `image1` text DEFAULT NULL,
+  `image2` text DEFAULT NULL,
+  `image3` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `app`) VALUES
-(1, 'http://kalyanbazar_admin.apk');
+INSERT INTO `settings` (`id`, `app`, `app_name`, `developer_name`, `ratings`, `downloads_count`, `image`, `image1`, `image2`, `image3`) VALUES
+(1, 'http://kalyanbazar_admin.apk', 'Kalyan bazar', 'sathyan', '4.6', '50k', 'upload/images/1672137019.4135.png', 'upload/images/1672137019.3916.jpg', 'upload/images/1672137019.3997.jpg', 'upload/images/1672137019.4073.jpg');
 
 --
 -- Indexes for dumped tables
